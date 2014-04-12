@@ -1,0 +1,13 @@
+.row
+  .col-md-2
+    .navbar-header
+      %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-collapse")
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to "OpenTree", root_path, class: 'navbar-brand'
+  .col-md-10
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        = nav_link "What's OpenTree?", "/"
+        = nav_link "How to Play", "/"

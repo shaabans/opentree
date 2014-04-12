@@ -1,0 +1,24 @@
+%html
+  %head
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %title= content_for?(:title) ? yield(:title) : "OpenTree"
+    %meta(name="description" content="#{ content_for?(:description) ? yield(:description) : "OpenTree" }")
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  %body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .container
+        = render 'layouts/navigation'
+
+    .container
+      = render 'layouts/messages'
+      = yield
+    #footer
+      .container
+        %p.text-muted.text-right
+          %small OpenTree Version: #{APP_VERSION::STRING}
+          - if Rails.env.development?
+            = debug params
+            %small= session[:view_state]
