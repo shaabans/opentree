@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Opentree::Application.config.secret_key_base = 'a17f18958fe95d0d8a1016a1b36e6761dc9d28a1d3ee12d6a42fc51957e31e4dee2935c507d89306c11e75641e307d317f4aaaea79de04c046a39d18dc98c5d3'
+Opentree::Application.config.secret_key_base = ENV['SECRET_KEY_BASE'] || 'a17f18958fe95d0d8a1016a1b36e6761dc9d28a1d3ee12d6a42fc51957e31e4dee2935c507d89306c11e75641e307d317f4aaaea79de04c046a39d18dc98c5d3'
