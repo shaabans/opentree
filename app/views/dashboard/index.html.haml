@@ -46,15 +46,9 @@
                       = tree.ownername
 
 :javascript
-  var handler = Gmaps.build('Google');
-  handler.buildMap({internal: {id: 'map'}}, function() {
-    if (navigator.geolocation)
-      navigator.geolocation.getCurrentPosition(displayOnMap);
-  });
-
-  function displayOnMap(position) {
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: { maxZoom: 14 }, internal: {id: 'map'}}, function(){
     markers = handler.addMarkers(#{raw @marker_hash.to_json})
-    var marker = handler.addMarkers(markers);
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
-  }
+  });
