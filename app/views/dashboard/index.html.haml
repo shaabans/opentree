@@ -48,6 +48,50 @@
                     %a{:href => (flickr_user_url tree.owner)}
                       = tree.ownername
 
+
+  .row.space-80
+  .row
+    .col-md-4.container-right
+      %span.glyphicon.glyphicon-info-sign.icon-large
+    .col-md-8
+      %p.disclaimer
+        The images shown here are real Flickr images collected in real time
+        based on being tagged with "opentree".
+
+  .row.space-80
+  .row
+    .col-md-4.container-right
+      %span.glyphicon.glyphicon-info-sign.icon-large
+    .col-md-8
+      %p.disclaimer
+        This website is a response to a 
+        = link_to '2014 Space Apps Challenge', 'https://2014.spaceappschallenge.org/'
+        called
+        = link_to 'Tree Factor', 'https://2014.spaceappschallenge.org/challenge/tree-factor/'
+        = "."
+        We used the challenge to help us work out 3 big ideas:
+        %ol
+          %li
+            Real scientific data can be collected by citizen scientists who
+            are just old enough to use a smartphone. Crowd sourcing is a
+            phrase that recnetly caught on, but it has been done well
+            link_to 'time', 'http://setiathome.ssl.berkeley.edu/'
+            and 
+            link_to 'time again', 'https://www.duolingo.com'
+            in the past.
+          %li
+            We can use existing infrastructures to do this instead of
+            inventing our own.  In this case we are using Flickr to capture,
+            catalog, index, store and share data.
+            This is cheaper, better, and familiar.
+          %li
+            We can solve a tough image recognition problem by using familiar
+            objects in a novel way.  In this case, we have our citzen
+            scientists put a 8.5" x 11" piece of paper on a tree, then crop
+            their images to the size of the tree, which gives us everything
+            we need to figure out the tree's size fairly accurately.
+
+
 :javascript
   handler = Gmaps.build('Google');
   handler.buildMap({ provider: { maxZoom: 14 }, internal: {id: 'map'}}, function(){
