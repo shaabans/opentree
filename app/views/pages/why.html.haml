@@ -1,14 +1,71 @@
 .container
-  .row
-    .col-md-3
+  .row.space-20
+    .col-md-3.space-20
       Pretty graphic
     .col-md-9
-      %h2 Trees Are Smart
+      %h2 Trees Know Things We Don't
       %p
-        Hi there human.
+        The health of a tree can tell us things about the health of our
+        environment.  This, in turn, tells us things about our health.
+      %p
+        Simple measures such as a tree's growth over the years tells us a lot
+        about its health.  Measuring this accurately lets you predict very
+        interesting things.
 
-  .row
+  .row.space-40
+    .col-md-3.space-20
+      Pretty graphic
+    .col-md-9
+      %h2 Measuring a Tree's Size is Hard
+      %p
+        How tall is that tree in the front yard?  How much did it grow in
+        each of the last 5 years?
+      %p
+        Don't feel bad if you don't know.  Measuring a tree's size is hard,
+        which is why scientists don't have a lot of tree growth data. Turns
+        out they can't do it very well either. Satellite images don't cut
+        it for making accurate height measurements.
+        
+  .row.space-40
+    .col-md-3.space-20
+      Pretty graphic
+    .col-md-9
+      %h2 How to Teach a Computer to Measure Trees
+      %p
+        Computers can do a lot of work for us, but not everything.
+      %p
+        A simple picture of a tree is close to all that we need, but a couple
+        of other essential ingredients need to be provided by us humans,
+        including some
+        sort of scale reference in the image (so that we can figure out how
+        big things are) along with a clear idea of where the tree starts and
+        stops. Give those things to a computer, and it can do the rest.
+
+  .row.space-40
+    .col-md-3.space-20
+      Pretty graphic
+    .col-md-9
+      %h2 Flickr and The Crowd Can Help
+      %p
+        What if anybody could easily help measure trees in their backyard or
+        street, accurately and easily?
+      %p
+        Here's what we came up with:
+        %ol
+          %li Find a tree, and pin an 8.5" x 11" piece of paper to it
+          %li Take a picture of a tree with your phone's Flickr app
+          %li Crop it to the size of the tree
+          %li Tag it with "opentree"
+      %p
+        That's it.  OpenTree does the rest.
+      %p
+        OpenTree collects all the images on Flickr tagged with "opentree",
+        does some basic automatic checks on them to make sure them
+        (to make sure they're really trees and not dogs or shoes),
+        then uses the piece of paper you pinned on the tree that's now in
+        the image to figure out how big things are.
+
+  .row.space-60
     .col-md-12
-      .space-40
       %a.btn.btn-primary.btn-lg(role="button" href="/pages/how")
         How Does It Work? &raquo;
