@@ -1,0 +1,14 @@
+.container
+  .row
+    .col-md-7
+      = image_tag flickr_photo_url(@tree.id, @tree.farm, @tree.server, @tree.secret)
+    .col-md-5
+      %h4= @tree.title
+      %h4 36 Feet Tall
+      %h4= @tree.dates.taken
+      %h4
+        %a{:href => (flickr_user_url @tree.owner)}
+          = @tree.owner.username
+      %h4 No Health Data
+      %h4 Dogwood
+      = debug @tree

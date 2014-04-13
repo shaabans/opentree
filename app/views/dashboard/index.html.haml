@@ -37,7 +37,7 @@
               - @trees.each do |tree|
                 %tr
                   %td
-                    %a{:href => (tree.id)}
+                    %a{:href => ("/tree/#{tree.id}")}
                       = tree.title
                   %td= tree.datetaken
                   %td
