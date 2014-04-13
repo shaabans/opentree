@@ -42,6 +42,7 @@ GEM
     gmaps4rails (2.1.2)
     haml (4.0.5)
       tilt
+    high_voltage (2.1.0)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -119,6 +120,7 @@ DEPENDENCIES
   flickraw
   gmaps4rails
   haml
+  high_voltage
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.0.2)

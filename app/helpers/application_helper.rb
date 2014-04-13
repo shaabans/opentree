@@ -12,11 +12,6 @@ module ApplicationHelper
     end
   end
 
-  def flickr_user_url(user_id)
-    return "http://www.flickr.com/people/#{user_id}/"
-  end
-
-
 end
 
 module APP_VERSION
