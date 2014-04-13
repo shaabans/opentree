@@ -4,11 +4,14 @@
 .container
   .row
     .col-md-3
+      .space-40
       #map.map-tree-detail(style="width: 100%; height: 240px;")
     .col-md-3
+      .space-40
       = image_tag flickr_photo_url(@tree.id, @tree.farm, @tree.server, @tree.secret), class: 'image-tree-detail'
     .col-md-6
-      %h4= @tree.title
+      .space-40
+      %h2= @tree.title
       %h4 36 Feet Tall
       %h4= @tree.dates.taken
       %h4
@@ -16,10 +19,24 @@
           = @tree.owner.username
       %h4 No Health Data
       %h4 Dogwood
-  .row.space-40
+  .row.space-80
   .row
     .col-md-12
-      %h4 Chart coming soon ...
+      = image_tag 'graph1.png'
+  .row.space-80
+  .row
+    .col-md-1.container-right
+      %span.glyphicon.glyphicon-info-sign.icon-large
+    .col-md-8
+      %p.disclaimer
+        The images shown are real Flicker images being pulled dynmaically
+        based on being tagged with &quot;opentree&quot;.
+        The charts are fabricated examples based on data we will collect
+        directly, along with data and images from other services such as
+        = link_to 'GIBS', 'https://wiki.earthdata.nasa.gov/display/GIBS/GIBS+API+for+Developers'
+        and
+        = link_to 'forecast.io', 'https://developer.forecast.io/'
+
 
 :javascript
   handler = Gmaps.build('Google');
