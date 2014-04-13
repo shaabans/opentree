@@ -3,9 +3,11 @@
 
 .container
   .row
-    .col-md-7
-      = image_tag flickr_photo_url(@tree.id, @tree.farm, @tree.server, @tree.secret)
-    .col-md-5
+    .col-md-3
+      #map.map-tree-detail(style="width: 100%; height: 240px;")
+    .col-md-3
+      = image_tag flickr_photo_url(@tree.id, @tree.farm, @tree.server, @tree.secret), class: 'image-tree-detail'
+    .col-md-6
       %h4= @tree.title
       %h4 36 Feet Tall
       %h4= @tree.dates.taken
@@ -14,12 +16,10 @@
           = @tree.owner.username
       %h4 No Health Data
       %h4 Dogwood
+  .row.space-40
   .row
-    .col-md-7
-      %h4= @tree.title
-      %h4 36 Feet Tall
-    .col-md-5
-      #map(style="width: 100%; height: 400px;")
+    .col-md-12
+      %h4 Chart coming soon ...
 
 :javascript
   handler = Gmaps.build('Google');
