@@ -8,8 +8,9 @@ class ApplicationController < ActionController::Base
     FlickRaw.api_key="e3a2482b9cddd488eefb60638fc3cc29"
     FlickRaw.shared_secret="1d51ecc8a4105776"
     
-    list = flickr.photos.search tags: "opentree",
-                                extras: "owner_name,date_taken"
+    list = flickr.photos.search user_id: "42628740@N02",
+                                tags: "opentree",
+                                extras: "owner_name,date_taken,geo"
     return list
   end
 
