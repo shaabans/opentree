@@ -1,18 +1,18 @@
 %script{:type => "text/javascript", :src  => "//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry"}
 %script{:type => "text/javascript", :src  => "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"}
 
-.jumbotron
+.jumbotron(style="padding: 30 40 40 40;")
   .container
     %h1 Trees Matter
     %p Trees know when there's trouble before we do. Let's help them tell us.
     %p
-      %a.btn.btn-primary.btn-lg(role="button")
+      %a.btn.btn-primary.btn-lg(role="button" href="pages/why")
         Huh? &raquo;
 
 .container
   .row
     .col-md-6
-      #map(style="width: 400px; height: 400px;")
+      #map(style="width: 100%; height: 400px;")
     .col-md-6
       .row
         .col-md-8
