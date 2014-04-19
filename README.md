@@ -1,6 +1,8 @@
 # Opentree
 
 ## Problem
+This project is a response to the [Tree Factor Challenge](https://2014.spaceappschallenge.org/challenge/tree-factor/) which is part of the [2014 Space Apps Challenge](https://2014.spaceappschallenge.org/).
+
 Measuring tree growth over time provides incredibly valuable environmental data, but is very difficult to collect.  Even professionally collected urban tree inventories (such as [this](http://www2.daveytreekeeper.com/mytreekeeper/index.html?ds=14)) rarely house much, if any, data on tree size over time. 
 
 ## Approach
